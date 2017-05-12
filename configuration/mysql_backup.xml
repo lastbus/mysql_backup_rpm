@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>mysql.backup.daemon.pid.dir</name>
+        <value>/var/run</value>
+        <display-name></display-name>
+        <description></description>
+    </property>
+    <property>
+        <name>mysql.backup.daemon.pid.file</name>
+        <value>mysql_backup.pid</value>
+        <display-name></display-name>
+        <description></description>
+    </property>
+    <property>
+        <name>mysql.backup.databases</name>
+        <value>ambari</value>
+        <display-name>备份数据库名</display-name>
+        <description>需要备份的 MySQL 数据库，用逗号分隔开：比如 ambari,hive</description>
+    </property>
+    <property>
+        <name>mysql.backup.hour</name>
+        <value>12</value>
+        <display-name></display-name>
+        <description>备份的时间：小时，范围 0 - 24</description>
+    </property>
+    <property>
+        <name>mysql.backup.minute</name>
+        <value>15</value>
+        <display-name></display-name>
+        <description>备份的时间：分钟， 范围0 - 59</description>
+    </property>
+    <property>
+        <name>mysql.backup.local.directory</name>
+        <value>/var/lib/mysql_backup</value>
+        <display-name>备份文件本地保存路径</display-name>
+        <description>备份保存的本地文件路径</description>
+    </property>
+    <property>
+        <name>mysql.backup.hdfs.directory</name>
+        <value>/user/mysql/backup</value>
+        <display-name>备份文件 HDFS 保存路径</display-name>
+        <description>数据保存的 HDFS 文件路径</description>
+    </property>
+    <property>
+        <name>mysql.backup.conf.dir</name>
+        <value>/etc/mysql_backup/conf</value>
+        <display-name></display-name>
+        <description></description>
+    </property>
+    <property>
+        <name>mysql.backup.log</name>
+        <value>/var/log/mysql_backup.log</value>
+        <display-name></display-name>
+        <description></description>
+    </property>
+</configuration>

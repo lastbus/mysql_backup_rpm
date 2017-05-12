@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>MYSQL_BACKUP</name>
+            <displayName>mysql_backup</displayName>
+            <comment>backup mysql database</comment>
+            <version>1.0.0</version>
+            <components>
+                <component>
+                    <name>Mysql Backup</name>
+                    <displayName>Mysql Backup</displayName>
+                    <category>MASTER</category>
+                    <cardinality>1</cardinality>
+                    <commandScript>
+                        <script>scripts/master.py</script>
+                        <scriptType>PYTHON</scriptType>
+                    </commandScript>
+                    <configFiles>
+                        <configFile>
+                            <type>xml</type>
+                            <fileName>mysql_backup.xml</fileName>
+                            <dictionaryName>mysql_backup</dictionaryName>
+                        </configFile>
+                    </configFiles>
+                </component>
+            </components>
+        </service>
+    </services>
+</metainfo>
